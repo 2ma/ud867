@@ -3,13 +3,22 @@ package com.udacity.gradle.builditbigger.backend;
 /** The object model for the data we are sending through endpoints */
 public class MyBean {
 
-    private String myData;
+    private String question;
+    private String answer;
 
-    public String getData() {
-        return myData;
+    public String getQuestion() {
+        return question;
     }
 
-    public void setData(String data) {
-        myData = data;
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
+    public String getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(String answer) {
+        this.answer = answer;
     }
 }

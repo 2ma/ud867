@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".JokeDisplayActivity"
+        android:background="@color/yellow"
+        >
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_margin="16dp"
+            tools:text="Why do scuba divers fall backwards into the water?"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <Button
+            android:id="@+id/idkButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/idk"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_margin="8dp"
+            />
+
+        <TextView
+            android:id="@+id/answer"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_margin="32dp"
+            tools:text="Because if they fell forwards they’d still be in the boat."
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/badumts"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/badumts"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:src="@drawable/monkey_badumts"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+</layout>

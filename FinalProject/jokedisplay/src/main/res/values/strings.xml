@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JokeDisplay</string>
+    <string name="idk">I don\'t know</string>
+    <string name="badumts">Badum ts</string>
+</resources>
