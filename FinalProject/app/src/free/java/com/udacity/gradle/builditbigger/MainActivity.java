@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 
 public class MainActivity extends BaseActivity {
@@ -31,6 +32,12 @@ public class MainActivity extends BaseActivity {
                 }
             }
         });
+
+        AdView bannerAd = binding.adView;
+        AdRequest adRequest = new AdRequest.Builder()
+            .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+            .build();
+        bannerAd.loadAd(adRequest);
     }
 
     @Override
@@ -48,5 +55,29 @@ public class MainActivity extends BaseActivity {
             .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
             .build();
         interstitialAd.loadAd(adRequest);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (binding.adView != null) {
+            binding.adView.resume();
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        if (binding.adView != null) {
+            binding.adView.pause();
+        }
+        super.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (binding.adView != null) {
+            binding.adView.destroy();
+        }
+        super.onDestroy();
     }
 }

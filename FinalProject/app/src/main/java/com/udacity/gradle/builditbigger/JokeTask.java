@@ -28,7 +28,7 @@ class JokeTask extends AsyncTask<Void, Void, Result<Joke>> {
 
         if (myApi == null) {
             MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(), new AndroidJsonFactory(), null)
-                .setRootUrl("http://10.0.2.2:8080/_ah/api/")
+                .setRootUrl("http://10.0.3.2:8080/_ah/api/")
                 .setGoogleClientRequestInitializer(request -> request.setDisableGZipContent(true));
 
             myApi = builder.build();
